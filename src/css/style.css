@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 * {
     margin: 0px;
@@ -20,6 +20,9 @@ body {
 .content {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 162px;
 
     & .profile {
         height: 100vh;
@@ -127,7 +130,7 @@ body {
     }
 
     & .skill {
-        height: 100vh;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -180,11 +183,130 @@ body {
                         flex-direction: row;
                         flex-wrap: wrap;
                         max-width: 100%;
-                        gap: 16px;
+                        gap: 24px;
                         justify-content: center;
                     }
                 }
             }
         }
+    }
+
+    & .portfolio {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .portfolio-content {
+            height: fit-content;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & h1 {
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            & p {
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            & .portfolio-container {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 24px;
+                width: 100%;
+                flex-direction: row;
+                justify-content: center;
+                gap: 32px;
+
+                & .portfolio-card {
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 512px;
+                    gap: 16px;
+                    text-align: center;
+                    justify-content: space-between;
+                    padding: 32px;
+                    border-radius: 8px;
+                    border-style: solid;
+                    border-color: #59735b;
+                    background-color: #c0cfc0;
+
+                    & img {
+                        border-radius: 4px;
+                    }
+
+                    & h2 {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    & .contact {
+        background-color: #2c352d;
+        height: auto;
+        display: flex;
+        padding: 64px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .contact-content {
+            height: fit-content;
+            gap: 42px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & .menu-content {
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                justify-content: center;
+                align-items: center;
+
+                & a {
+                    color: white;
+                    border-radius: 8px;
+                    padding: 8px;
+                    text-align: center;
+                    width: 128px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-decoration-line: none;
+                }
+
+                & a:hover {
+                    background-color: white;
+                    color: #2c352d;
+                }
+            }
+
+            & p {
+                font-size: smaller;
+                letter-spacing: 0.04em;
+                color: white;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #skill {
+        height: 100vh;
+    }
+
+    #portfolio {
+        height: 100vh;
     }
 }
