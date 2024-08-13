@@ -346,7 +346,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1250px) {
     #nav {
         justify-content: center;
         align-items: center;
